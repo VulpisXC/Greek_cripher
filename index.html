@@ -59,7 +59,7 @@
 
   <section class="panel">
     <details>
-      <summary>Show my cipher alphabet</summary>
+      <summary>Work in Progress</summary>
       <p class="muted">This is the custom mapping used by the encoder.</p>
       <div class="mapping" id="mapping"></div>
     </details>
@@ -89,7 +89,7 @@ function encode(text) {
   return [...text].map(ch => mapping[ch.toUpperCase()] || ch).join("");
 }
 function update() {
-  output.textContent = input.value ? encode(input.value) : "";
+  output.textContent = input.value ? encode(input.value) : ">:P";
   count.textContent = `${[...output.textContent].length} characters`;
   status.textContent = "";
 }
