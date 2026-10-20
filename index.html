@@ -68,7 +68,7 @@
 </main>
 <script>
 const mapping = {
-  A:"ψ", B:"δ", C:"κ", K:"κ", D:"ω", E:"α", F:"χ", G:"ι",
+  A:"ψ", B:"δ", C:"Δ", K:"κ", D:"ω", E:"α", F:"χ", G:"ι",
   H:"ρ", I:"ε", J:"ξ", L:"ο", M:"θ", N:"ζ", O:"β", P:"υ",
   Q:"φ", R:"μ", S:"η", T:"π", U:"γ", V:"σ", W:"λ", X:"τ",
   Y:"ν", Z:"ϑ"
@@ -77,7 +77,8 @@ const reverse = {};
 for (const [letter, symbol] of Object.entries(mapping)) {
   if (!reverse[symbol]) reverse[symbol] = letter;
 }
-reverse["κ"] = "C/K";
+reverse["κ"] = "K";
+reverse["Δ"] = "C";
 
 const input = document.getElementById("message");
 const output = document.getElementById("encoded");
