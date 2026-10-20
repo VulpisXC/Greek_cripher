@@ -36,7 +36,7 @@
 </head>
 <body>
 <main>
-  <div class="eyebrow">Personal code</div>
+  <div class="eyebrow">I'm Watching You</div>
   <h1>Greek Cipher</h1>
   <p class="intro">Don't do anything stupid.</p>
 
@@ -89,7 +89,7 @@ function encode(text) {
   return [...text].map(ch => mapping[ch.toUpperCase()] || ch).join("");
 }
 function update() {
-  output.textContent = input.value ? encode(input.value) : ">:p";
+  output.textContent = input.value ? encode(input.value) : "";
   count.textContent = `${[...output.textContent].length} characters`;
   status.textContent = "";
 }
