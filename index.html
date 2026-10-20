@@ -89,7 +89,7 @@ function encode(text) {
   return [...text].map(ch => mapping[ch.toUpperCase()] || ch).join("");
 }
 function update() {
-  output.textContent = input.value ? encode(input.value) : "Trust the process";
+  output.textContent = input.value ? encode(input.value) : ">:p";
   count.textContent = `${[...output.textContent].length} characters`;
   status.textContent = "";
 }
