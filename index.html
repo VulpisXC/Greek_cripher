@@ -38,23 +38,23 @@
 <main>
   <div class="eyebrow">Personal code</div>
   <h1>Greek Cipher</h1>
-  <p class="intro">Type a message and watch it transform into your shuffled Greek-letter code.</p>
+  <p class="intro">Don't do anything stupid.</p>
 
   <section class="panel">
     <label for="message">Your message</label>
-    <textarea id="message" placeholder="Type your secret message here…"></textarea>
+    <textarea id="message" placeholder="Trust the process"></textarea>
     <div class="bar" style="margin-top:16px">
       <label for="encoded" style="margin:0">Encoded message</label>
       <span class="muted" id="count">0 characters</span>
     </div>
-    <div class="output" id="encoded" aria-live="polite">Your code will appear here…</div>
+    <div class="output" id="encoded" aria-live="polite">Free Blackmail!!</div>
     <div class="buttons">
       <button class="primary" id="copy">Copy encoded message</button>
       <button id="decode">Decode message</button>
       <button id="clear">Clear</button>
     </div>
     <div id="status" role="status"></div>
-    <p class="notice">C and K both become κ. Spaces, numbers, and punctuation stay unchanged. Since C/K share one symbol, decoding cannot always tell which letter was originally used.</p>
+    <p class="notice">The C/K issue is fixed now.</p>
   </section>
 
   <section class="panel">
@@ -89,7 +89,7 @@ function encode(text) {
   return [...text].map(ch => mapping[ch.toUpperCase()] || ch).join("");
 }
 function update() {
-  output.textContent = input.value ? encode(input.value) : "Your code will appear here…";
+  output.textContent = input.value ? encode(input.value) : "Trust the process";
   count.textContent = `${[...output.textContent].length} characters`;
   status.textContent = "";
 }
